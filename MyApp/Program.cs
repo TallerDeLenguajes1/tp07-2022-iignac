@@ -1,4 +1,6 @@
-﻿List<Tarea> listaPendientes = new List<Tarea>();
+﻿using Ejercicio1;
+
+List<Tarea> listaPendientes = new List<Tarea>();
 List<Tarea> listaRealizadas = new List<Tarea>();
 List<Tarea> listaAuxPendientes = new List<Tarea>();
 Tarea nuevaTarea;
@@ -69,7 +71,7 @@ void moverTareas(List<Tarea> listaTareas)
 void buscarTareaPendiente(List<Tarea> listaTareas)
 {
     Console.WriteLine("\n==> Ingrese la descripción de la tarea pendiente a buscar:");
-    string descripcionAux = (Console.ReadLine()).ToLower(); // uso ToLower porque Contains distingue entre mayusc y minusc
+    string descripcionAux = (Console.ReadLine()!).ToLower(); // uso ToLower porque Contains distingue entre mayusc y minusc
     int bandera=0;
     for (int i = 0; i < listaAuxPendientes.Count; i++)
     {
